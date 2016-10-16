@@ -1,0 +1,48 @@
+{
+    "name": "xloit/xloit-bridge-zend-view",
+    "type": "library",
+    "description": "Xloit Bridge Zend View Library",
+    "keywords": [
+        "xloit",
+        "zend-view",
+        "library"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yudha Setiawan",
+            "email": "me@yudhasetiawan.com",
+            "homepage": "http://yudhasetiawan.com/"
+        }
+    ],
+    "require": {
+        "php": "^5.4 || ^7.0",
+        "xloit/xloit-bridge-zend-eventmanager": "^0.0",
+        "xloit/xloit-bridge-zend-mvc": "^0.1",
+        "xloit/xloit-bridge-zend-uri": "^0.0",
+        "xloit/xloit-bridge-zend-servicemanager": "^1.0",
+        "xloit/xloit-exception": "^0.0",
+        "xloit/xloit-std": "^0.0",
+        "xloit/xloit-datetime": "^0.0",
+        "zendframework/zend-i18n": "^2.7",
+        "zendframework/zend-view": "^2.8",
+        "zendframework/zend-mvc-plugin-flashmessenger": "1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "xloit/xloit-bridge-zend-authentication": "^1.0",
+        "xloit/xloit-bridge-zend-form": "^1.0"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Xloit\\Bridge\\Zend\\View\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Xloit\\Bridge\\Zend\\View\\Tests\\": "tests/"
+        }
+    }
+}
