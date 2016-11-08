@@ -71,7 +71,7 @@ use Zend\View\Renderer\PhpRenderer as ZendPhpRenderer;
  * @method I18nHelper\Translate|string translate($message, $textDomain = null, $locale = null)
  * @method Helper\Authentication|AuthenticationService authentication()
  * @method Helper\Configuration|mixed config($path = null, $default = null)
- * @method Helper\Date date($date, $timezone = null, $format = null)
+ * @method Helper\Date|string date($date, $timezone = null, $format = null)
  * @method Helper\FileSize fileSize($size, $outputUnit = Helper\FileSize::AUTO)
  * @method Helper\FlashMessenger|string flashMessenger($namespace = null, $includeCurrent = false, $forceClear = true)
  * @method Helper\Gravatar gravatar($email = null, $options = [], $attributes = [])
