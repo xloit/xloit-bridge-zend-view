@@ -33,8 +33,8 @@ class JsonModel extends ZendJsonModel implements EventManagerAwareInterface
     /**
      * Constructor to prevent {@link JsonModel} from being loaded more than once.
      *
-     * @param  null|array|\Traversable $variables
-     * @param  array|\Traversable      $options
+     * @param null|array|\Traversable $variables
+     * @param array|\Traversable      $options
      */
     public function __construct($variables = null, $options = null)
     {

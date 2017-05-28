@@ -27,11 +27,13 @@ class HasGravatar extends Gravatar
     /**
      * User email has Gravatar.
      *
-     * @param string $email
+     * @param string|null $email      Email address.
+     * @param null|array  $options    Options.
+     * @param array       $attributes Attributes for image tag (title, alt etc.).
      *
      * @return bool
      */
-    public function __invoke($email = null)
+    public function __invoke($email = null, $options = [], $attributes = [])
     {
         /** @noinspection PhpUndefinedMethodInspection */
         if (!$email

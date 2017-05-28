@@ -50,7 +50,7 @@ class Configuration extends AbstractHelper
      * @param string $path
      * @param mixed  $default
      *
-     * @return static|mixed
+     * @return $this|mixed
      * @throws \Xloit\Std\Exception\RuntimeException
      */
     public function __invoke($path = null, $default = null)

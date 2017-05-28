@@ -62,10 +62,10 @@ class FlashMessenger extends AbstractTextHelper
      * @param bool   $includeCurrent
      * @param bool   $forceClear
      *
-     * @return string|static
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @return string|$this
      * @throws \Zend\View\Exception\DomainException
+     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @throws \Zend\View\Exception\RuntimeException
      */
     public function __invoke($namespace = null, $includeCurrent = false, $forceClear = true)
     {
@@ -77,6 +77,54 @@ class FlashMessenger extends AbstractTextHelper
     }
 
     /**
+     * Return the flash messenger.
+     *
+     * @return PluginFlashMessenger
+     */
+    public function getFlashMessenger()
+    {
+        return $this->flashMessenger;
+    }
+
+    /**
+     * Sets the flash messenger.
+     *
+     * @param PluginFlashMessenger $flashMessenger
+     *
+     * @return $this
+     */
+    public function setFlashMessenger(PluginFlashMessenger $flashMessenger)
+    {
+        $this->flashMessenger = $flashMessenger;
+
+        return $this;
+    }
+
+    /**
+     * Return the PHP Renderer to render the partials.
+     *
+     * @return null|PhpRenderer
+     */
+    protected function getRenderer()
+    {
+        return $this->renderer;
+    }
+
+    /**
+     *
+     *
+     * @param PhpRenderer $renderer
+     *
+     * @return $this
+     */
+    public function setRenderer(PhpRenderer $renderer)
+    {
+        $this->renderer = $renderer;
+
+        return $this;
+    }
+
+    /**
      * Render a namespace.
      *
      * @param string $namespace
@@ -84,9 +132,9 @@ class FlashMessenger extends AbstractTextHelper
      * @param bool   $forceClear
      *
      * @return string
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\InvalidArgumentException
      * @throws \Zend\View\Exception\DomainException
+     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @throws \Zend\View\Exception\RuntimeException
      */
     public function renderNamespace($namespace, $includeCurrent = false, $forceClear = true)
     {
@@ -120,39 +168,15 @@ class FlashMessenger extends AbstractTextHelper
     }
 
     /**
-     * Return the flash messenger.
-     *
-     * @return null|PluginFlashMessenger
-     */
-    public function getFlashMessenger()
-    {
-        return $this->flashMessenger;
-    }
-
-    /**
-     * Sets the flash messenger.
-     *
-     * @param  PluginFlashMessenger
-     *
-     * @return \Xloit\Bridge\Zend\View\Helper\FlashMessenger
-     */
-    public function setFlashMessenger($flashMessenger)
-    {
-        $this->flashMessenger = $flashMessenger;
-
-        return $this;
-    }
-
-    /**
      * Render a message.
      *
      * @param string $message
      * @param string $namespace
      *
      * @return string
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\InvalidArgumentException
      * @throws \Zend\View\Exception\DomainException
+     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @throws \Zend\View\Exception\RuntimeException
      */
     public function renderMessage($message, $namespace = null)
     {
@@ -171,39 +195,15 @@ class FlashMessenger extends AbstractTextHelper
     }
 
     /**
-     * Return the PHP Renderer to render the partials.
-     *
-     * @return null|PhpRenderer
-     */
-    protected function getRenderer()
-    {
-        return $this->renderer;
-    }
-
-    /**
-     *
-     *
-     * @param PhpRenderer $renderer
-     *
-     * @return static
-     */
-    public function setRenderer(PhpRenderer $renderer)
-    {
-        $this->renderer = $renderer;
-
-        return $this;
-    }
-
-    /**
      * Render all messages.
      *
      * @param bool $includeCurrent
      * @param bool $forceClear
      *
      * @return string
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\InvalidArgumentException
      * @throws \Zend\View\Exception\DomainException
+     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @throws \Zend\View\Exception\RuntimeException
      */
     public function renderAllNamespaces($includeCurrent = false, $forceClear = true)
     {

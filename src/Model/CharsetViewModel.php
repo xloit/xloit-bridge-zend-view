@@ -46,7 +46,7 @@ class CharsetViewModel extends ViewModel
      *
      * @param string $charset
      *
-     * @return static
+     * @return $this
      */
     public function setCharset($charset)
     {

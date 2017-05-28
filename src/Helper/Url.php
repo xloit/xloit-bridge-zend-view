@@ -17,7 +17,6 @@
 
 namespace Xloit\Bridge\Zend\View\Helper;
 
-use RuntimeException;
 use Xloit\Bridge\Zend\Uri\Helper\UrlTrait;
 use Zend\View\Helper\Url as ZendUrl;
 
@@ -33,20 +32,17 @@ class Url extends ZendUrl
     /**
      * Generates an url given the name of a route.
      *
-     * @see   \Zend\Mvc\Router\RouteInterface::assemble()
+     * @see  \Zend\Router\RouteInterface::assemble()
      *
      * @param string $name
      * @param array  $params
      * @param array  $options
      * @param bool   $reuseMatchedParams
      *
-     * @throws \RuntimeException
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\RuntimeException
-     * @throws \Zend\View\Exception\InvalidArgumentException
      * @return string
      * @throws \Xloit\Bridge\Zend\Uri\Exception\RuntimeException
+     * @throws \Zend\View\Exception\InvalidArgumentException
+     * @throws \Zend\View\Exception\RuntimeException
      */
     public function __invoke($name = null, $params = [], $options = [], $reuseMatchedParams = false)
     {

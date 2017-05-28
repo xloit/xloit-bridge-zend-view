@@ -33,7 +33,7 @@ class Authentication extends AbstractHelper implements AuthenticationServiceAwar
 
     /**
      *
-     * @return static
+     * @return $this
      */
     public function __invoke()
     {
@@ -43,8 +43,8 @@ class Authentication extends AbstractHelper implements AuthenticationServiceAwar
     /**
      * Proxy to container methods.
      *
-     * @param  string $method
-     * @param  array  $args
+     * @param string $method
+     * @param array  $args
      *
      * @return mixed
      * @throws \Xloit\Bridge\Zend\View\Exception\BadMethodCallException

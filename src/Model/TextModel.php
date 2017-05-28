@@ -29,8 +29,7 @@ class TextModel extends CharsetViewModel
      *
      * @var string
      */
-    protected /** @noinspection AmbiguousMemberInitializationInspection */
-        $captureTo = null;
+    protected $captureTo = null;
 
     /**
      * Text is usually terminal.

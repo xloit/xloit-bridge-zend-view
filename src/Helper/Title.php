@@ -18,7 +18,7 @@
 namespace Xloit\Bridge\Zend\View\Helper;
 
 /**
- * A {@link Title} class
+ * A {@link Title} class.
  *
  * @package Xloit\Bridge\Zend\View\Helper
  */

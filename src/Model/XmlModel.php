@@ -29,8 +29,7 @@ class XmlModel extends CharsetViewModel
      *
      * @var string
      */
-    protected /** @noinspection AmbiguousMemberInitializationInspection */
-        $captureTo = null;
+    protected $captureTo = null;
 
     /**
      * Xml is usually terminal.

@@ -57,8 +57,8 @@ class Date extends AbstractHelper
      * @param string              $format
      *
      * @return string
-     * @throws \Xloit\DateTime\Exception\InvalidArgumentException
      * @throws \InvalidArgumentException
+     * @throws \Xloit\DateTime\Exception\InvalidArgumentException
      */
     public function __invoke($date = null, $timezone = null, $format = null)
     {
@@ -110,7 +110,7 @@ class Date extends AbstractHelper
      *
      * @param DateTimeZone|string $timezone
      *
-     * @return static
+     * @return $this
      * @throws \Xloit\DateTime\Exception\InvalidArgumentException
      */
     public function setTimezone($timezone)

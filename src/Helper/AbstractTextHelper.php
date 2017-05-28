@@ -49,7 +49,7 @@ abstract class AbstractTextHelper extends AbstractTranslatorHelper
      *
      * @param string $plugin
      *
-     * @return mixed
+     * @return \Zend\View\Helper\AbstractHelper
      */
     protected function getViewPlugin($plugin)
     {

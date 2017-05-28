@@ -48,7 +48,7 @@ trait ViewRendererAwareTrait
      *
      * @param RendererInterface $view
      *
-     * @return static
+     * @return $this
      */
     public function setView(RendererInterface $view)
     {

@@ -40,8 +40,8 @@ class ViewModel extends ZendViewModel implements EventManagerAwareInterface
     /**
      * Constructor to prevent {@link ViewModel} from being loaded more than once.
      *
-     * @param  null|array|\Traversable $variables
-     * @param  array|\Traversable      $options
+     * @param null|array|\Traversable $variables
+     * @param array|\Traversable      $options
      */
     public function __construct($variables = null, $options = null)
     {
@@ -67,7 +67,7 @@ class ViewModel extends ZendViewModel implements EventManagerAwareInterface
      *
      * @param string $contentType
      *
-     * @return static
+     * @return $this
      */
     public function setContentType($contentType)
     {

@@ -76,11 +76,11 @@ class FileSize extends AbstractHelper
     /**
      * Get a file size label.
      *
-     * @param int|float $size size in bytes
+     * @param int|float $size Size in bytes.
      * @param string    $outputUnit
      *
      * @return string
-     * @throws Exception\RuntimeException
+     * @throws \Xloit\Bridge\Zend\View\Exception\RuntimeException
      */
     public function __invoke($size, $outputUnit = self::AUTO)
     {
@@ -94,7 +94,7 @@ class FileSize extends AbstractHelper
 
         $size /= (1 << $this->sizes[$outputUnit]);
 
-        // if the number is float, we keep only 2 digits after the decimal point
+        // if the number is float, we keep only 2 digits after the decimal point.
         /** @noinspection TypeUnsafeComparisonInspection */
         if ($size != (int) $size) {
             $size = number_format((float) $size, 2);
@@ -102,7 +102,7 @@ class FileSize extends AbstractHelper
 
         /**
          * in the previous if we may have gone in it with 2.0000001 and after it ended with $size = 2.00
-         * so we should trim the 00
+         * so we should trim the 00.
          */
         /** @noinspection TypeUnsafeComparisonInspection */
         if ($size == (int) $size) {
@@ -131,7 +131,7 @@ class FileSize extends AbstractHelper
             }
         }
 
-        // return the smallest (last one iterated) size type
+        // return the smallest (last one iterated) size type.
         return $result;
     }
 }

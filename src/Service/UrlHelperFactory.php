@@ -32,21 +32,18 @@ class UrlHelperFactory implements FactoryInterface
     /**
      * Create the instance service (v3).
      *
-     * @param  ContainerInterface $container
-     * @param  string             $name
-     * @param  null|array         $options
+     * @param ContainerInterface $container
+     * @param string             $name
+     * @param null|array         $options
      *
      * @return Url
-     * @throws \Interop\Container\Exception\ContainerException
-     * @throws \Interop\Container\Exception\NotFoundException
-     * @throws \Zend\ServiceManager\Exception\InvalidServiceException
-     * @throws \Zend\ServiceManager\Exception\ServiceNotFoundException
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      * @throws \Zend\View\Exception\InvalidArgumentException
      */
     public function __invoke(ContainerInterface $container, $name, array $options = null)
     {
-        /** @noinspection TypeUnsafeComparisonInspection */
-        $routerName = PHP_SAPI == 'cli' ? 'HttpRouter' : 'Router';
+        $routerName = PHP_SAPI === 'cli' ? 'HttpRouter' : 'Router';
         $router     = $container->get($routerName);
         $viewHelper = new Url();
 

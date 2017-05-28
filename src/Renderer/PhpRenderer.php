@@ -74,11 +74,11 @@ use Zend\View\Renderer\PhpRenderer as ZendPhpRenderer;
  * @method Helper\Date|string date($date = null, $timezone = null, $format = null)
  * @method Helper\FileSize fileSize($size, $outputUnit = Helper\FileSize::AUTO)
  * @method Helper\FlashMessenger|string flashMessenger($namespace = null, $includeCurrent = false, $forceClear = true)
- * @method Helper\Gravatar gravatar($email = null, $options = [], $attributes = [])
+ * @method Helper\Gravatar gravatar($email = 'null', $options = [], $attributes = [])
  * @method Helper\HasGravatar hasGravatar($email = null)
  * @method Helper\HtmlClass|HtmlClassContainer htmlClass($key = null, $value = null, $setType = null)
  * @method Helper\Title title($value = null, $setType = null)
- * @method string url($name = null, array $params = [], array $options = [], $reuseMatchedParams = false)
+ * @method string url($name = null, array $params = [], $options = [], $reuseMatchedParams = false)
  *
  * @method string formButtonIcon(ElementInterface $element, $buttonContent = null)
  * @method string formCkEditor(ElementInterface $element = null, $options = [])

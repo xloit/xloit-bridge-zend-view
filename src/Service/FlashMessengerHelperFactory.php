@@ -31,13 +31,13 @@ class FlashMessengerHelperFactory implements FactoryInterface
     /**
      * Create the instance service (v3).
      *
-     * @param  ContainerInterface $container
-     * @param  string             $name
-     * @param  null|array         $options
+     * @param ContainerInterface $container
+     * @param string             $name
+     * @param null|array         $options
      *
      * @return FlashMessenger
-     * @throws \Interop\Container\Exception\ContainerException
-     * @throws \Interop\Container\Exception\NotFoundException
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      * @throws \Zend\ServiceManager\Exception\InvalidServiceException
      * @throws \Zend\ServiceManager\Exception\ServiceNotFoundException
      */

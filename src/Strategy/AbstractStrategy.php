@@ -67,17 +67,21 @@ abstract class AbstractStrategy extends AbstractListenerAggregate
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(
-            ViewEvent::EVENT_RENDERER, [
-            $this,
-            'selectRenderer'
-        ], $priority
+            ViewEvent::EVENT_RENDERER,
+            [
+                $this,
+                'selectRenderer'
+            ],
+            $priority
         );
 
         $this->listeners[] = $events->attach(
-            ViewEvent::EVENT_RESPONSE, [
-            $this,
-            'injectResponse'
-        ], $priority
+            ViewEvent::EVENT_RESPONSE,
+            [
+                $this,
+                'injectResponse'
+            ],
+            $priority
         );
     }
 
@@ -86,7 +90,7 @@ abstract class AbstractStrategy extends AbstractListenerAggregate
      *
      * @param \Zend\View\Renderer\RendererInterface $renderer
      *
-     * @return static
+     * @return $this
      */
     public function setRenderer(RendererInterface $renderer)
     {

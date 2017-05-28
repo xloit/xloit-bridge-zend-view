@@ -41,7 +41,7 @@ class Gravatar extends ZendGravatar
      * @param null|array  $options    Options.
      * @param array       $attributes Attributes for image tag (title, alt etc.).
      *
-     * @return static
+     * @return $this
      */
     public function __invoke($email = null, $options = [], $attributes = [])
     {

@@ -23,7 +23,7 @@ use Xloit\Bridge\Zend\View\Helper\Authentication;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * A {@link AuthenticationHelperFactory} class.
+ * An {@link AuthenticationHelperFactory} class.
  *
  * @package Xloit\Bridge\Zend\View\Service
  */
@@ -32,15 +32,13 @@ class AuthenticationHelperFactory implements FactoryInterface
     /**
      * Create the instance service (v3).
      *
-     * @param  ContainerInterface $container
-     * @param  string             $name
-     * @param  null|array         $options
+     * @param ContainerInterface $container
+     * @param string             $name
+     * @param null|array         $options
      *
      * @return Authentication
-     * @throws \Interop\Container\Exception\ContainerException
-     * @throws \Interop\Container\Exception\NotFoundException
-     * @throws \Zend\ServiceManager\Exception\InvalidServiceException
-     * @throws \Zend\ServiceManager\Exception\ServiceNotFoundException
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      */
     public function __invoke(ContainerInterface $container, $name, array $options = null)
     {

@@ -46,11 +46,12 @@ class HtmlClass extends AbstractHelper
 
     /**
      *
+     *
      * @param string $key
      * @param string $value
      * @param string $setType
      *
-     * @return static|HtmlClassContainer
+     * @return $this|HtmlClassContainer
      */
     public function __invoke($key = null, $value = null, $setType = null)
     {
@@ -78,7 +79,7 @@ class HtmlClass extends AbstractHelper
     /**
      * Retrieve a placeholder container.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return HtmlClassContainer
      */
@@ -93,7 +94,7 @@ class HtmlClass extends AbstractHelper
      * @param string $key
      * @param string $value
      *
-     * @return static
+     * @return $this
      */
     public function set($key, $value)
     {
@@ -108,7 +109,7 @@ class HtmlClass extends AbstractHelper
      * @param string $key
      * @param string $value
      *
-     * @return static
+     * @return $this
      */
     public function prepend($key, $value)
     {
@@ -123,7 +124,7 @@ class HtmlClass extends AbstractHelper
      * @param string $key
      * @param string $value
      *
-     * @return static
+     * @return $this
      */
     public function append($key, $value)
     {
@@ -135,10 +136,10 @@ class HtmlClass extends AbstractHelper
     /**
      * Set the container for an item in the registry.
      *
-     * @param  string             $key
-     * @param  HtmlClassContainer $container
+     * @param string             $key
+     * @param HtmlClassContainer $container
      *
-     * @return static
+     * @return $this
      */
     public function setContainer($key, HtmlClassContainer $container)
     {
@@ -150,7 +151,7 @@ class HtmlClass extends AbstractHelper
     /**
      * Does a particular container exist?
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return bool
      */
@@ -162,8 +163,8 @@ class HtmlClass extends AbstractHelper
     /**
      * Create a new container.
      *
-     * @param  string $key
-     * @param  array  $value
+     * @param string $key
+     * @param array  $value
      *
      * @return HtmlClassContainer
      */
@@ -175,7 +176,7 @@ class HtmlClass extends AbstractHelper
     /**
      * Delete a container.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return bool
      */

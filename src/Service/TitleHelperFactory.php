@@ -32,17 +32,15 @@ class TitleHelperFactory implements FactoryInterface
     /**
      * Create the instance service (v3).
      *
-     * @param  ContainerInterface $container
-     * @param  string             $name
-     * @param  null|array         $options
+     * @param ContainerInterface $container
+     * @param string             $name
+     * @param null|array         $options
      *
      * @return Title
-     * @throws \Interop\Container\Exception\NotFoundException
-     * @throws \Interop\Container\Exception\ContainerException if any other error occurs
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      * @throws \Zend\ServiceManager\Exception\InvalidServiceException
-     * @throws \Zend\ServiceManager\Exception\ServiceNotFoundException if unable to resolve the service.
-     * @throws \Zend\ServiceManager\Exception\ServiceNotCreatedException if an exception is raised when creating a
-     * service.
+     * @throws \Zend\ServiceManager\Exception\ServiceNotFoundException
      */
     public function __invoke(ContainerInterface $container, $name, array $options = null)
     {
