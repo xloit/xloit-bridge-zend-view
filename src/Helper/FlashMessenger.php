@@ -38,6 +38,13 @@ class FlashMessenger extends AbstractTextHelper
     /**
      *
      *
+     * @var string
+     */
+    protected $layoutPrefix = 'layout/partial/messages/';
+
+    /**
+     *
+     *
      * @var PluginFlashMessenger
      */
     protected $flashMessenger;
@@ -74,6 +81,30 @@ class FlashMessenger extends AbstractTextHelper
         }
 
         return $this->renderNamespace($namespace, $includeCurrent, $forceClear);
+    }
+
+    /**
+     * Return the layout path prefix.
+     *
+     * @return string
+     */
+    public function getLayoutPrefix()
+    {
+        return $this->layoutPrefix;
+    }
+
+    /**
+     * Sets the layout path prefix.
+     *
+     * @param string $layoutPrefix
+     *
+     * @return $this
+     */
+    public function setLayoutPrefix($layoutPrefix)
+    {
+        $this->layoutPrefix = $layoutPrefix;
+
+        return $this;
     }
 
     /**
@@ -189,7 +220,7 @@ class FlashMessenger extends AbstractTextHelper
             ]
         );
 
-        $viewModel->setTemplate('layout/partial/messages/' . $namespace);
+        $viewModel->setTemplate($this->layoutPrefix . $namespace);
 
         return $this->getRenderer()->render($viewModel);
     }
